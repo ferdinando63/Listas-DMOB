@@ -1,0 +1,114 @@
+/* Exe 1 */
+.container{
+    display: flex;
+}
+
+.parag{
+    margin: 10px;
+}
+
+.img img{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 400px) {
+    .container{
+        flex-direction: column;
+    }
+    .img{
+        width: 100%;
+    }
+    .parag{
+        width: 100%;
+    }
+    .parag p{
+        line-height: 20px;
+        font-size: 15px;
+    }
+}
+
+
+/* Exe 2 */
+h3{
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.header{
+    float: left;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background-color: #0537CC;
+}
+
+.nav{
+    float: left;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: #293F80;
+}
+
+.main{
+    float: left;
+    width: 65%;
+    height: 500px;
+    position: relative;
+    background-color: #537EFF;
+}
+
+.aside{
+    float: left;
+    width: 35%;
+    height: 500px;
+    position: relative;
+    background-color: #0645FF;
+}
+
+.footer{
+    float: left;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background-color: #032380;
+}
+
+@media (max-width: 768px){
+   
+    .header{
+        top: 0px;
+        left: 0px;
+        position: absolute;
+    }
+
+    .nav{
+        top: 370px;
+        left: 0px;
+        position: absolute;
+    }
+
+    .main{
+        top: 70px;      
+        left: 0px; 
+        height: 300px;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .aside{
+        top: 420px;  
+        left: 0px;      
+        height: 70px;
+        width: 100%;
+        position: absolute;
+    }
+
+    .footer{
+        top: 490px;
+        left: 0px;
+        position: absolute;
+    }
+}
