@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Questão 2</title>
+    </head>
+
+    <body>
+        Selecione a operação </br>
+
+        <select name="op" id="ops" onchange="controlOP()">
+            <option value=""></option>
+            <option value="soma">Soma</option>
+            <option value="sub">Subtração</option>
+        </select>
+
+        <h5><%=result%></h5>
+    
+        <form id="formOp" method="" action="/operacao" style="display: none">
+            
+            <input type="number" id="nm1" name="n1">
+            <label id="sinal">+</label>
+            <input type="number" id="nm2" name="n2">
+            <input type="submit" id="submit" value="">
+
+        </form>
+   
+        <script>
+            function controlOP() {
+
+                var opts = document.getElementById('ops').value;
+                var form = document.getElementById('formOp');
+                var but = document.getElementById('submit');
+                var lb = document.getElementById("sinal");
+
+                if (opts == 'soma') {
+                    form.method = "POST";
+                    form.style.display = "block";
+                    but.value = "Somar";
+                    lb.innerHTML = "+"
+                }
+
+                if (opts == 'sub') {
+                    form.method = "GET";
+                    form.style.display = "block";
+                    but.value = "Subtrair";
+                    lb.innerHTML = "-"
+                }
+
+                if (opts == "") {
+                    form.style.display = 'none';
+                }
+
+                console.log(opts)
+            }  
+
+        </script>
+    </body>
+
+</html>

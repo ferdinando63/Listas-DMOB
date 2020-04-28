@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Questão 1</title>
+    </head>
+
+    <body>
+        <div id="Container">
+            <div id="form">
+                Digite o número de campos para soma </br>
+    
+                <input type="number" id="numInp">
+                <button onclick=addHtml()>Vai</button>
+    
+                <br><br>
+                <label id="lbvalor"><%=valor%></label>
+    
+                <form id="form2" method="POST" action="/valor" name="formulario">
+                </form>
+    
+            </div>
+    
+        </div>
+
+        <script>
+            function addHtml() {
+                var num = document.getElementById('numInp').value;
+    
+                document.getElementById('lbvalor').innerHTML = 'Digite nos campos o numeros para valor <br><br>';
+                var html = '';
+                for (var i = 0; i < num; i++) {
+                    html += '<input type="number" id=\'' + i + '\' name =\'valor\'> <br><br>';
+                }
+                console.log(html);
+    
+    
+                html += '<input type="submit" id="submit" value="valor">'
+                document.getElementById('form2').innerHTML = html; };
+        </script>
+
+    </body>
+
+</html>
