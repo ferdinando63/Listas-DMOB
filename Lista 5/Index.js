@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.render(__dirname + '/Exe1.html', { valor: "" });
 })
 
-app.post('/valor', (req, res) => {
+app.post('/valor', (req, res) =>  {
 
   var form = req.body.valor;
   
